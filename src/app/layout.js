@@ -27,12 +27,10 @@ export default function RootLayout({ children }) {
         m-auto
         bg-sky-950 text-white 
         ${geistSans.variable} ${geistMono.variable} antialiased
-        ${layoutConfig.flexColItemsOnly}
-        `}
-      >
+        ${layoutConfig.flexColItemsOnly}`}>
       <TheHeader/>
       <main className='mt-10'>{children}</main>
-      <footer>footer</footer>
+      <footer className='mt-10'>footer если нужен вообще</footer>
       </body>
     </html>
   );
