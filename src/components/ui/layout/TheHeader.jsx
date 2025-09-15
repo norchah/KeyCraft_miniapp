@@ -7,7 +7,7 @@ export default function TheHeader() {
     <header className={`${layoutConfig.flexColItemsJustify} pt-15`}>
       <Image src="/logo-free-bg.svg" alt="logo" width={80} height={80}/>
       <h1 className='text-bold text-xl'>KeyCraft</h1>
-      <p className='max-w-[320px] text-center'>{textsConfig.mainDescription}</p>
+      <p className='max-w-[320px] text-center text-gray-300'>{textsConfig.mainDescription}</p>
     </header>
   );
 }
