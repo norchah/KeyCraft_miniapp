@@ -9,10 +9,11 @@ export default function KeysPage() {
 
 
   useEffect(() => {
-    const api = new UserApi()
-    api.get()
-      .then((data) => setUsers(data))
-      .catch((err) => console.error(err));
+    // вызываем свой API route
+    fetch('/api/users')
+      .then(res => res.json())
+      .then(data => setUsers(data))
+      .catch(err => console.error(err));
   }, []);
 
 

@@ -2,8 +2,6 @@ import axios from "axios";
 import camelcaseKeys from "camelcase-keys";
 
 
-const serviceJwt = process.env.SERVICE_JWT;
-
 export class UserApi {
   constructor() {
     this.api = axios.create({
@@ -11,7 +9,7 @@ export class UserApi {
       // withCredentials: true,
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${serviceJwt}`,
+        Authorization: `Bearer ${process.env.SERVICE_JWT}`,
       },
     });
   }
