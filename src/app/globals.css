@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+:root {
+  --body-bg: #000a19; /* по умолчанию */
+}

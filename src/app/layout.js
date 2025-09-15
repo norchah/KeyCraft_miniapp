@@ -22,7 +22,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased text-white`}
       >
-        {children}
+      <div className='max-w-[560px] min-h-[800px] outline'>{children}</div>
+
       </body>
     </html>
   );
