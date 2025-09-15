@@ -23,8 +23,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`
-        max-w-200 min-w-[320px] min-h-screen
-        bg-sky-900 text-white 
+        min-h-screen
+        m-auto
+        bg-sky-950 text-white 
         ${geistSans.variable} ${geistMono.variable} antialiased
         ${layoutConfig.flexColItemsOnly}
         `}
