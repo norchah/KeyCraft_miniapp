@@ -23,7 +23,7 @@ export default function Home() {
         </li>
       </ul>
       <div className='max-w-screen flex flex-col gap-2'>
-        <TG tg={tgReal.platform}>platform</TG>
+        {tgReal && <TG tg={tgReal.platform}>platform</TG>}
 
       </div>
 
