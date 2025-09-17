@@ -4,6 +4,7 @@ import TheHeader from "@/components/ui/layout/TheHeader";
 import {layoutConfig} from "@/configs/layoutConfig";
 import Script from "next/script";
 import {TgProvider} from "@/providers/tgProvider";
+import TheFooter from "@/components/ui/layout/TheFooter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,7 +41,7 @@ export default function RootLayout({children}) {
     {/*<TgProvider>*/}
     <TheHeader/>
     <main className='mt-10'>{children}</main>
-    <footer className='mt-10'>footer если нужен вообще</footer>
+    <TheFooter/>
     {/*</TgProvider>*/}
     </body>
     </html>

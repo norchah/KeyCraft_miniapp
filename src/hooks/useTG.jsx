@@ -11,7 +11,7 @@ export function useTGReal() {
     if (typeof window !== 'undefined' && window.Telegram?.WebApp) {
       setTg({...window.Telegram.WebApp, source: 'real'});
     }
-  }, []);
+  }, [tg]);
 
   return tg;
 }

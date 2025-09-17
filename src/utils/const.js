@@ -127,3 +127,38 @@ export const mocData = {
     "isAccessGranted": false
   }
 }
+
+export const dataItems = [
+  {name: 'initData', href: '001', description: 'Подписанные данные от Telegram для проверки на бэке. Менять нельзя!'},
+  {name: 'initDataUnsafe', href: '002', description: 'То же самое, но без подписи. Можно использовать для UI, но не для авторизации.'},
+  {name: 'version', href: '003', description: 'Версия Bot API, которую поддерживает клиент.'},
+  {name: 'platform', href: '004', description: 'Платформа Telegram (tdesktop, android, ios, web).'},
+  {name: 'colorScheme', href: '005', description: 'Текущая цветовая схема ("light"/"dark").'},
+  {name: 'themeParams', href: '006', description: 'Текущие цвета интерфейса Telegram, можно использовать для UI.'},
+  {name: 'isExpanded', href: '007', description: 'На весь экран ли открыто'},
+  {name: 'viewportHeight', href: '008', description: 'Высота видимой части приложения.'},
+  {name: 'viewportStableHeight', href: '009', description: 'Высота в стабильном состоянии (без анимаций).'},
+  {name: 'safeAreaInset', href: '010', description: 'Отступы для безопасной зоны устройства (notch, navbar).'},
+  {name: 'contentSafeAreaInset', href: '011', description: 'Отступы для контента без перекрытия UI Telegram.'},
+  {name: 'isClosingConfirmationEnabled', href: '012', description: 'Включена ли проверка при закрытии.'},
+  {name: 'isVerticalSwipesEnabled', href: '013', description: 'Можно ли закрывать свайпами.'},
+  {name: 'isFullscreen', href: '014', description: 'Мини-приложение в полноэкранном режиме.'},
+  {name: 'isOrientationLocked', href: '015', description: 'Ориентация заблокирована.'},
+  {name: 'isActive', href: '016', description: 'Мини-приложение активно.'},
+  {name: 'headerColor', href: '017', description: 'Цвет хедера приложения.'},
+  {name: 'backgroundColor', href: '018', description: 'Цвет фона приложения.'},
+  {name: 'bottomBarColor', href: '019', description: 'Цвет нижней панели.'},
+  {name: 'BackButton', href: '002', description: 'Управление кнопкой "Назад".'},
+  {name: 'MainButton', href: '021', description: 'Управление основной кнопкой.'},
+  {name: 'SecondaryButton', href: '022', description: 'Управление вторичной кнопкой.'},
+  {name: 'SettingsButton', href: '023', description: 'Управление кнопкой настроек.'},
+  {name: 'HapticFeedback', href: '024', description: 'Вибро/тактическая отдача.'},
+  {name: 'CloudStorage', href: '025', description: 'Работа с облачным хранилищем.'},
+  {name: 'DeviceStorage', href: '026', description: 'Работа с локальным хранилищем устройства.'},
+  {name: 'SecureStorage', href: '027', description: 'Работа с защищённым локальным хранилищем.'},
+  {name: 'BiometricManager', href: '028', description: 'Доступ к биометрии.'},
+  {name: 'Accelerometer', href: '029', description: 'Датчик ускорения.'},
+  {name: 'DeviceOrientation', href: '030', description: 'Датчик ориентации устройства.'},
+  {name: 'Gyroscope', href: '031', description: 'Гироскоп.'},
+  {name: 'LocationManager', href: '032', description: ''},
+]
