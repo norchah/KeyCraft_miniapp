@@ -2,7 +2,7 @@
 
 export function TGMock({children, tg}) {
   return (
-    <pre className='text-xs'>
+    <pre className='text-xs max-w-[375px]'>
       {tg && (
         <p>[MOCK]{children}: {JSON.stringify(tg, null, 2)}</p>
       )}

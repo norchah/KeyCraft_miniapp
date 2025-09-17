@@ -24,8 +24,11 @@ export default function Home() {
             ключи</Link>
         </li>
       </ul>
-      {tgMock && <TGMock tg={tgMock.initDataUnsafe}>initDataUnsafe</TGMock>}
-      {tgReal && <TGReal tg={tgReal.initDataUnsafe}>initDataUnsafe</TGReal>}
+      <div className='w-screen flex flex-col gap-2'>
+        {tgMock && <TGMock tg={tgMock.initDataUnsafe}>initDataUnsafe</TGMock>}
+        {tgReal && <TGReal tg={tgReal.initDataUnsafe}>initDataUnsafe</TGReal>}
+      </div>
+
     </>
   );
 }
