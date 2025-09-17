@@ -1,15 +1,14 @@
 'use client';
 
 import Link from "next/link";
-import InitDateUnsafe from "@/components/tgDebug/InitDateUnsafe";
 import {useTg} from "@/providers/tgProvider";
+import TG from "@/components/tgDebug/tg";
 
 export default function Home() {
   const tg = useTg();
 
   return (
     <>
-      <pre>{tg}</pre>
       <ul className="flex flex-col gap-2">
         <li className='cursor-pointer'>
           <Link href="/payments"
@@ -22,7 +21,8 @@ export default function Home() {
             ключи</Link>
         </li>
       </ul>
-      <p>initDataUnsafe :{tg.initDataUnsafe}</p>
+      <TG tg={tg.initDataUnsafe}>initDataUnsafe</TG>
+      <TG tg={tg.source}>source</TG>
     </>
   );
 }

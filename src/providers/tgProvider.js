@@ -1,30 +1,29 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState } from "react";
+import {createContext, useContext, useEffect, useState} from 'react';
+import {mocData} from '@/utils/const';
 
 const TgContext = createContext(null);
 
 export function TgProvider({children}) {
-  const [tgData, setTgData] = useState(null);
+  const [tg, setTg] = useState({
+    ...mocData,
+    source: 'mock', // источник данных: mock или real
+  });
 
   useEffect(() => {
-    if (typeof window !== "undefined" && window.Telegram?.WebApp) {
-      const tg = window.Telegram.WebApp;
-      setTgData(tg);
+    if (typeof window !== 'undefined' && window.Telegram?.WebApp) {
+      const webApp = window.Telegram.WebApp;
+      setTg({
+        ...webApp,
+        source: 'real',
+      });
     }
   }, []);
 
-  return (
-    <TgContext.Provider value={tgData}>
-      {children}
-    </TgContext.Provider>
-  );
+  return <TgContext.Provider value={tg}>{children}</TgContext.Provider>;
 }
 
 export function useTg() {
-  const context = useContext(TgContext);
-  if (context === undefined) {
-    throw new Error("useTg must be used within a TgProvider");
-  }
-  return context;
+  return useContext(TgContext);
 }
