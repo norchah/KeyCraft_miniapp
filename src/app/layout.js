@@ -36,13 +36,14 @@ export default function RootLayout({children}) {
         min-h-screen
         m-auto
         bg-sky-950 text-white 
+        max-w-[475px]
+        flex flex-col items-center
+        outline
         ${geistSans.variable} ${geistMono.variable} antialiased
         ${layoutConfig.flexColItemsOnly}`}>
-    {/*<TgProvider>*/}
     <TheHeader/>
     <main className='mt-10'>{children}</main>
     <TheFooter/>
-    {/*</TgProvider>*/}
     </body>
     </html>
   );

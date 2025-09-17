@@ -6,7 +6,7 @@ import {useTGMock, useTGReal} from "@/hooks/useTG";
 
 export default function Home() {
   let tgMock = useTGMock();
-  let tgReal = useTGReal();
+  // let tgReal = useTGReal();
 
   return (
     <>
@@ -23,7 +23,7 @@ export default function Home() {
         </li>
       </ul>
       <div className='max-w-screen flex flex-col gap-2'>
-        {tgReal && <TG tg={tgReal.platform}>platform</TG>}
+        {/*{tgReal && <TG tg={tgReal.platform}>platform</TG>}*/}
 
       </div>
 
