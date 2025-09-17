@@ -1,10 +1,20 @@
 'use client';
 
-export default function TG({children, tg}) {
+export function TGMock({children, tg}) {
   return (
     <pre className='text-xs'>
       {tg && (
-        <p>{children}: {JSON.stringify(tg, null, 2)}</p>
+        <p>[MOCK]{children}: {JSON.stringify(tg, null, 2)}</p>
+      )}
+    </pre>
+  );
+}
+
+export function TGReal({children, tg}) {
+  return (
+    <pre className='text-xs'>
+      {tg && (
+        <p>[REAL]{children}: {JSON.stringify(tg, null, 2)}</p>
       )}
     </pre>
   );

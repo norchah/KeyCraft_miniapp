@@ -37,11 +37,11 @@ export default function RootLayout({children}) {
         bg-sky-950 text-white 
         ${geistSans.variable} ${geistMono.variable} antialiased
         ${layoutConfig.flexColItemsOnly}`}>
-    <TgProvider>
-      <TheHeader/>
-      <main className='mt-10'>{children}</main>
-      <footer className='mt-10'>footer если нужен вообще</footer>
-    </TgProvider>
+    {/*<TgProvider>*/}
+    <TheHeader/>
+    <main className='mt-10'>{children}</main>
+    <footer className='mt-10'>footer если нужен вообще</footer>
+    {/*</TgProvider>*/}
     </body>
     </html>
   );

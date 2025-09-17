@@ -1,11 +1,14 @@
 'use client';
 
 import Link from "next/link";
-import {useTg} from "@/providers/tgProvider";
-import TG from "@/components/tgDebug/tg";
+import TG, {TGMock, TGReal} from "@/components/tgDebug/tg";
+import {useTGMock, useTGReal} from "@/hooks/useTG";
 
 export default function Home() {
-  const tg = useTg();
+  const tgMock = useTGMock();
+  const tgReal = useTGReal();
+
+  console.log(typeof tgReal?.isBoolean === 'boolean');
 
   return (
     <>
@@ -21,8 +24,8 @@ export default function Home() {
             ключи</Link>
         </li>
       </ul>
-      <TG tg={tg.initDataUnsafe}>initDataUnsafe</TG>
-      <TG tg={tg.source}>source</TG>
+      {tgMock && <TGMock tg={tgMock.initDataUnsafe}>initDataUnsafe</TGMock>}
+      {tgReal && <TGReal tg={tgReal.initDataUnsafe}>initDataUnsafe</TGReal>}
     </>
   );
 }
