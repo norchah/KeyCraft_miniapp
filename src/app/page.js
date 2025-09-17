@@ -2,18 +2,12 @@
 
 import Link from "next/link";
 import {useEffect} from "react";
+import TgDebug from "@/app/tgDebug";
 
 export default function Home() {
 
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.Telegram?.WebApp) {
-      const tg = window.Telegram.WebApp;
-      tg.ready();
-      console.log(tg.initData)
-    }
-  })
-
   return (
+    <>
     <ul className="flex flex-col gap-2">
       <li className='cursor-pointer'>
         <Link href="/payments"
@@ -26,5 +20,7 @@ export default function Home() {
           ключи</Link>
       </li>
     </ul>
+      <TgDebug/>
+    </>
   );
 }
