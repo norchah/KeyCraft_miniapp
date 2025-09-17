@@ -9,6 +9,7 @@ export default function Home() {
 
   return (
     <>
+      <pre>{tg}</pre>
     <ul className="flex flex-col gap-2">
       <li className='cursor-pointer'>
         <Link href="/payments"
