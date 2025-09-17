@@ -12,14 +12,14 @@ export default function Home() {
   // useEffect(() => {
   //   if (tgReal && typeof tgReal.disableVerticalSwipes === "function") {
   //     tgReal.disableVerticalSwipes();
-    }
-    // if (tgReal && typeof tgReal.lockOrientation === "function") {
-    //   tgReal.lockOrientation();
-    // }
-    // if (tgReal && typeof tgReal.requestFullscreen === 'function') {
-    //   tgReal.requestFullscreen();
-    // }
-  // }, [tgReal]);
+// }
+// if (tgReal && typeof tgReal.lockOrientation === "function") {
+//   tgReal.lockOrientation();
+// }
+// if (tgReal && typeof tgReal.requestFullscreen === 'function') {
+//   tgReal.requestFullscreen();
+// }
+// }, [tgReal]);
 
   return (
     <>
