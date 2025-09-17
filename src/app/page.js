@@ -9,9 +9,9 @@ export default function Home() {
   let tgMock = useTGMock();
   let tgReal = useTGReal();
 
-  useEffect(() => {
-    if (tgReal && typeof tgReal.disableVerticalSwipes === "function") {
-      tgReal.disableVerticalSwipes();
+  // useEffect(() => {
+  //   if (tgReal && typeof tgReal.disableVerticalSwipes === "function") {
+  //     tgReal.disableVerticalSwipes();
     }
     // if (tgReal && typeof tgReal.lockOrientation === "function") {
     //   tgReal.lockOrientation();
@@ -19,7 +19,7 @@ export default function Home() {
     // if (tgReal && typeof tgReal.requestFullscreen === 'function') {
     //   tgReal.requestFullscreen();
     // }
-  }, [tgReal]);
+  // }, [tgReal]);
 
   return (
     <>
