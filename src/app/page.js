@@ -16,6 +16,9 @@ export default function Home() {
     if (tgReal && typeof tgReal.lockOrientation === "function") {
       tgReal.lockOrientation();
     }
+    if (tgReal && typeof tgReal.requestFullscreen === 'function') {
+      tgReal.requestFullscreen();
+    }
   }, [tgReal]);
 
   return (
