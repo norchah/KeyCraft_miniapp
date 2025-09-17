@@ -27,7 +27,7 @@ export default function TheFooter() {
 
 
   return (
-    <nav className='fixed bottom-0 max-w-[475px] m-auto min-w-[375px] h-15 bg-gray-800'>
+    <nav className='fixed bottom-0 max-w-screen m-auto min-w-[375px] h-15 bg-gray-800'>
       <ul className='flex flex-row justify-around w-full h-full'>
         {item}
       </ul>
