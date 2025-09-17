@@ -1,8 +1,7 @@
 'use client';
 
 import Link from "next/link";
-import {useEffect} from "react";
-import TgDebug from "@/app/tgDebug";
+import TgDateBase from "@/components/tgDebug/tgDateBase";
 
 export default function Home() {
 
@@ -20,7 +19,7 @@ export default function Home() {
           ключи</Link>
       </li>
     </ul>
-      <TgDebug/>
+      <TgDateBase/>
     </>
   );
 }
