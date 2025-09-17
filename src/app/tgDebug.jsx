@@ -13,7 +13,7 @@ export default function TgDebug() {
   }, []);
 
   return (
-    <pre className="bg-gray-100 p-2 text-xs overflow-x-auto">
+    <pre className="p-2 text-xs overflow-x-auto">
       {dump || "Loading TG..."}
     </pre>
   );
