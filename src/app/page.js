@@ -1,9 +1,11 @@
 'use client';
 
 import Link from "next/link";
-import TgDateBase from "@/components/tgDebug/tgDateBase";
+import InitDateUnsafe from "@/components/tgDebug/InitDateUnsafe";
+import {useTg} from "@/providers/tgProvider";
 
 export default function Home() {
+  const tg = useTg();
 
   return (
     <>
@@ -19,7 +21,7 @@ export default function Home() {
           ключи</Link>
       </li>
     </ul>
-      <TgDateBase/>
+     <InitDateUnsafe tg={tg.initDataUnsafe}/>
     </>
   );
 }

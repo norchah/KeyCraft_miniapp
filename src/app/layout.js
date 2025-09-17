@@ -3,6 +3,7 @@ import "./globals.css";
 import TheHeader from "@/components/ui/layout/TheHeader";
 import {layoutConfig} from "@/configs/layoutConfig";
 import Script from "next/script";
+import {TgProvider} from "@/providers/tgProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,9 +37,11 @@ export default function RootLayout({children}) {
         bg-sky-950 text-white 
         ${geistSans.variable} ${geistMono.variable} antialiased
         ${layoutConfig.flexColItemsOnly}`}>
-    <TheHeader/>
-    <main className='mt-10'>{children}</main>
-    <footer className='mt-10'>footer если нужен вообще</footer>
+    <TgProvider>
+      <TheHeader/>
+      <main className='mt-10'>{children}</main>
+      <footer className='mt-10'>footer если нужен вообще</footer>
+    </TgProvider>
     </body>
     </html>
   );
