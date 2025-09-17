@@ -6,7 +6,10 @@ import {useTGMock, useTGReal} from "@/hooks/useTG";
 
 export default function Home() {
   let tgMock = useTGMock();
-  // let tgReal = useTGReal();
+  let tgReal = useTGReal();
+
+  tgReal.disableVerticalSwipes()
+  tgReal.lockOrientation()
 
   return (
     <>
