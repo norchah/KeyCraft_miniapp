@@ -13,7 +13,7 @@ export default function TgDebug() {
   }, []);
 
   return (
-    <pre className="p-2 text-xs max-w-100 overflow-x-auto">
+    <pre className="p-2 text-xs max-w-100">
       {dump || "Loading TG..."}
     </pre>
   );
