@@ -3,13 +3,20 @@
 import Link from "next/link";
 import {TG} from "@/components/tgDebug/tg";
 import {useTGMock, useTGReal} from "@/hooks/useTG";
+import {useEffect} from "react";
 
 export default function Home() {
   let tgMock = useTGMock();
   let tgReal = useTGReal();
 
-  tgReal.disableVerticalSwipes()
-  tgReal.lockOrientation()
+  useEffect(() => {
+    if (tgReal && typeof tgReal.disableVerticalSwipes === "function") {
+      tgReal.disableVerticalSwipes();
+    }
+    if (tgReal && typeof tgReal.lockOrientation === "function") {
+      tgReal.lockOrientation();
+    }
+  }, [tgReal]);
 
   return (
     <>
